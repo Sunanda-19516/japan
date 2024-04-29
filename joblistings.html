@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>Job Listings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Display children in a column */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #ffca28;
+        }
+        .feature-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .job-listing {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .job-listing h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .job-listing p {
+            color: #666;
+            font-size: 16px;
+        }
+        .job-listing button {
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .job-listing button:hover {
+            background-color: #ffca28;
+        }
+		@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		.job-listing {
+    /* Add this line to your existing .job-listing style */
+    animation: fadeInUp 0.5s ease forwards;
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <main>
+        <section class="search-bar">
+            <input type="text" id="location-input" placeholder="Enter a location...">
+            <button onclick="searchJobs()">Search</button>
+        </section>
+
+        <section class="feature-bar">
+            <div class="job-listing">
+                <h3>Software Engineer</h3>
+                <p><b>Location:</b> Tokyo</p>
+                <p><b>Description:</b> This is a description of the Software Engineer position in Tokyo.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Marketing Specialist</h3>
+                <p><b>Location:</b> Osaka</p>
+                <p><b>Description:</b> This is a description of the Marketing Specialist position in Osaka.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Web Developer</h3>
+                <p><b>Location:</b> Kyoto</p>
+                <p><b>Description:</b> This is a description of the Web Developer position in Kyoto.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Graphic Designer</h3>
+                <p><b>Location:</b> Nagoya</p>
+                <p><b>Description:</b> This is a description of the Graphic Designer position in Nagoya.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>English Teacher</h3>
+                <p><b>Location:</b> Fukuoka</p>
+                <p><b>Description:</b> This is a description of the English Teacher position in Fukuoka.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Customer Support Representative</h3>
+                <p><b>Location:</b> Sapporo</p>
+                <p><b>Description:</b> This is a description of the Customer Support Representative position in Sapporo.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Financial Analyst</h3>
+                <p><b>Location:</b> Hiroshima</p>
+                <p><b>Description:</b> This is a description of the Financial Analyst position in Hiroshima.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>HR Manager</h3>
+                <p><b>Location:</b> Kobe</p>
+                <p><b>Description:</b> This is a description of the HR Manager position in Kobe.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Project Manager</h3>
+                <p><b>Location:</b> Okinawa</p>
+                <p><b>Description:</b> This is a description of the Project Manager position in Okinawa.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-listing">
+                <h3>Data Analyst</h3>
+                <p><b>Location:</b> Yokohama</p>
+                <p><b>Description:</b> This is a description of the Data Analyst position in Yokohama.</p>
+                <button>Apply Now</button>
+            </div>
+        </section>
+
+        <div id="map"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-lang-js/2.4.1/jquery.lang.js"></script>
+<style> 
+*{ 
+	margin:0; 
+} 
+a{ 
+	font-size:25px; 
+	justify-content:space-around; 
+	text-decoration:none; 
+	color:white; 
+	padding:25px 15px; 
+} 
+h3{
+	font-size:25px; 
+	justify-content:space-around; 
+	text-decoration:none; 
+	color:white; 
+	padding:25px 15px; 
+}
+	
+.one{ 
+	text-align:justify; 
+	font-size:20px; 
+	font-family:Times; 
+}
+#loginButton{
+	display:none;
+} 
+</style> 
+</head> 
+<body> 
+<table width="100%"> 
+<tbody><tr align="center" width="100%"> 
+<td> <p style="font-size:30px" ><b>日本での仕事の機会</b></p>
+<p style="font-size:20px">日本での魅力的な仕事の機会を探検してください。</p>
+</td> 
+</tr> 
+</table> 
+
+
+<table width="100%"> 
+<tr bgcolor="navy" height="40px"> 
+<td><a href="Home.html" id="a1" > ホーム</a> 
+<a href="joblistings1.html" target="frame2">仕事リスト</a>
+<a href="aboutjapan1.html" target="frame2"> 日本について</a> 
+ <select id="lang-select">
+        <option value="ja">Japanese</option>
+		<option value="en"><a href="Home.html">English</a></option>
+    </select>
+</td> 
+</tr> 
+</table> 
+<table width="100%"> 
+<tr height="450px" width="100%"> 
+<td ><iframe src="image.html" name="frame1" width="550px" 
+height="410px" style="border:none"></iframe></td> 
+<td><iframe src="overview1.html" name="frame2" width="550px" 
+height="410px" style="border:none"></iframe> 
+</td></tr></table> 
+<iframe src="button.html" name="frame3" style="display:none;"></iframe>
+<table width="100%"> 
+
+<tr bgcolor="navy" height="70px" colspan="2">
+<td> 
+<div>
+         
+                <a href="https://www.facebook.com">フェイスブック</a>
+                <a href="https://www.twitter.com">ツイッター</a>
+                <a href="https://www.linkedin.com"> リンクトイン </a>
+          
+       
+            <a href="" style="cursor: pointer;">メール: info@example.com</a>
+           <a href="" style="cursor: pointer;">電話: +1234567890</a>
+            <a href="" style="cursor: pointer;">住所: 東京、日本</a>
+</div>
+</td> 
+</tr>
+</tbody> 
+</table>
+<script>
+        document.getElementById('lang-select').addEventListener('change', function() {
+            var selectedLang = this.value;
+            if (selectedLang === 'en') {
+                window.location.href = 'Home.html';
+            }
+        });
+    </script>
+	</body> 
+</html>

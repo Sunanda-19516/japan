@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-lang-js/2.4.1/jquery.lang.js"></script>
+<style> 
+*{ 
+	margin:0; 
+} 
+a{ 
+	font-size:25px; 
+	justify-content:space-around; 
+	text-decoration:none; 
+	color:white; 
+	padding:25px 15px; 
+} 
+h3{
+	font-size:25px; 
+	justify-content:space-around; 
+	text-decoration:none; 
+	color:white; 
+	padding:25px 15px; 
+}
+	
+.one{ 
+	text-align:justify; 
+	font-size:20px; 
+	font-family:Times; 
+}
+#loginButton{
+	display:none;
+} 
+</style> 
+</head> 
+<body> 
+<table width="100%"> 
+<tbody><tr align="center" width="100%"> 
+<td> <p style="font-size:30px" ><b>Work Opportunities in Japan</b></p>
+<p style="font-size:20px">Explore exciting job opportunities in Japan.</p>
+</td> 
+</tr> 
+</table> 
+
+
+<table width="100%"> 
+<tr bgcolor="navy" height="40px"> 
+<td><a href="Home.html" id="a1" >Home</a> 
+<a href="joblistings.html" target="frame2">Job Listings</a>
+<a href="aboutjapan.html" target="frame2">About Japan</a> 
+ <select id="lang-select">
+        <option value="en">English</option>
+        <option value="ja"><a href="home1.html" >Japanese</a></option>
+    </select>
+</td> 
+</tr> 
+</table> 
+<table width="100%"> 
+<tr height="450px" width="100%"> 
+<td ><iframe src="image.html" name="frame1" width="550px" 
+height="410px" style="border:none"></iframe></td> 
+<td><iframe src="overview.html" name="frame2" width="550px" 
+height="410px" style="border:none"></iframe> 
+</td></tr></table> 
+<iframe src="button.html" name="frame3" style="display:none;"></iframe>
+<table width="100%"> 
+
+<tr bgcolor="navy" height="70px" colspan="2">
+<td> 
+<div>
+         
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.twitter.com">Twitter</a>
+                <a href="https://www.linkedin.com">LinkedIn</a>
+          
+       
+            <a href="" style="cursor: pointer;">Email: info@example.com</a>
+           <a href="" style="cursor: pointer;">Phone: +1234567890</a>
+            <a href="" style="cursor: pointer;">Address: Tokyo, Japan</a>
+</div>
+</td> 
+</tr>
+</tbody> 
+</table>
+ <script>
+        // Redirect to home1.html when Japanese is selected
+        document.getElementById('lang-select').addEventListener('change', function() {
+            var selectedLang = this.value;
+            if (selectedLang === 'ja') {
+                window.location.href = 'home1.html';
+            }
+        });
+    </script>
+	</body> 
+</html>
